@@ -6,6 +6,11 @@
 
 Command-line (and JS library) for generating responses from an LLM and evaluating those responses. Primarily focused on evaluating a single prompt or use-case and comparing results across multiple runs. The input and output format is JSON so it can be integrated with existing tools.  
 
+*Goals:*
+* All configuration based (no need to write code)
+* Support for all types of evaluations, simple funtional evaluation all the way to complex rubrics
+* Utilize existing tools and best-practices where possible
+
 ## Usage
 
 ```
