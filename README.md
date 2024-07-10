@@ -1,10 +1,10 @@
-# DEval
+# Deval
 
 > It’s easy to make something cool with LLMs, but very hard to make something production-ready with them.
 
 - [Chip Huyen](https://huyenchip.com/2023/04/11/llm-engineering.html)
 
-## What is `DEval`?
+## What is `Deval`?
 
 Command-line for generating responses from an LLM and evaluating those responses. Primarily focused on evaluating a prompts with datasets and comparing results across multiple runs.
 
@@ -72,7 +72,7 @@ Environment variables can be set in the environment or in a `.env` file in the d
 
 **Rate limiting**
 
-If DEval encounters a rate limit error (or other recoverable error from the API) it will retry with exponential backoff to try and recover from those errors. However, if you know you have a specific rate limit, it will be more efficient to configure DEval to run within that rate limit.
+If Deval encounters a rate limit error (or other recoverable error from the API) it will retry with exponential backoff to try and recover from those errors. However, if you know you have a specific rate limit, it will be more efficient to configure Deval to run within that rate limit.
 
 You can use the rate limiting environment variables to speed up or slow down your requests depending on the rate of requests you are trying to achieve. Use `DEVAL_CONCURRENCY` to increase the number of concurrent requests to run faster. Adust `DEVAL_REQUEST_INTERVAL_MS` and `DEVAL_REQUEST_CAP` to slow down requests. For example, if you wanted to run a maximum of 20 requests per minute you could set `DEVAL_REQUEST_INTERVAL_MS=60000, DEVAL_REQUEST_CAP=20` and this would prevent more than 20 requests per minute. If you wanted to spread those requests out through the minute it might be better to set `DEVAL_REQUEST_INTERVAL_MS=3000, DEVAL_REQUEST_CAP=1`. This would run a maximum of one request every 3 seconds.
 
@@ -135,7 +135,7 @@ To evaluate multi-turn applications you can provide the messages in the dataset.
 
 _What happens if I have a variable named `evals`, or `messages` in my data used for rendering a prompt?_
 
-You can prefix the lmeval variable with `lmeval-` and that will always be used for evals or messages instead of your variable. Example: if you prompt contains something like `here are your evals: {{evals}}` then you can include that string in your data as `evals` and you can use `lmeval-evals` to indicate the id of your line in the dataset.
+You can prefix the DEval variable with `deval-` and that will always be used for evals or messages instead of your variable. Example: if you prompt contains something like `here are your evals: {{evals}}` then you can include that string in your data as `evals` and you can use `deval-evals` to indicate the id of your line in the dataset.
 
 ### Run results
 
