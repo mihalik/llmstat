@@ -1,0 +1,14 @@
+{
+  "metadata": { "name": "evalPrompt", "provider": "openai" },
+  "model": "gpt-3.5-turbo",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Your task it to determine the city where the user lives.  They will provide you with information about their city and you are to return ONLY the name of the city.\n\nIf you can't determine the city, you will return \"Unknown\" as the city name"
+    },
+    {
+      "role": "user",
+      "content": "I live {{location}}."
+    }
+  ]
+}

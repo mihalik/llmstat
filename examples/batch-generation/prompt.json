@@ -1,0 +1,14 @@
+{
+  "metadata": { "name": "singlePrompt", "provider": "openai" },
+  "model": "gpt-3.5-turbo",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Write a joke about an animal based on the name and color provided.  The joke should be cute."
+    },
+    {
+      "role": "user",
+      "content": "Animal: {{animal}}\nColor: {{color}}"
+    }
+  ]
+}

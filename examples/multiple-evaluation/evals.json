@@ -1,0 +1,33 @@
+{
+  "austin": {
+    "type": "contains",
+    "value": "Austin"
+  },
+  "sanfran": {
+    "type": "contains",
+    "value": "San Francisco"
+  },
+  "longyearbyen": {
+    "type": "contains",
+    "value": "Longyearbyen"
+  },
+  "unknown": {
+    "type": "contains",
+    "value": "Unknown"
+  },
+  "default": {
+    "type": "default",
+    "value": [
+      {
+        "name": "short",
+        "type": "javascript",
+        "value": "output.length < 100"
+      },
+      {
+        "name": "no-sorry",
+        "type": "not-icontains-any",
+        "value": ["sorry", "as an ai", "apologize"]
+      }
+    ]
+  }
+}

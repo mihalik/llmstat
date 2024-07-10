@@ -1,0 +1,19 @@
+{
+  "default": {
+    "type": "default",
+    "value": [
+      {
+        "type": "llm-rubric",
+        "value": "It must be accurate"
+      },
+      {
+        "type": "llm-rubric",
+        "value": "It must explain the concept well"
+      },
+      {
+        "type": "javascript",
+        "value": "output.length > 10"
+      }
+    ]
+  }
+}

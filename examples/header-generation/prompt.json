@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "name": "headerPrompt",
+    "description": "This prompt tests passing custom headers to the OpenAI provider and providing dynamic values for headers.",
+    "provider": "openai",
+    "headers": {
+      "x-custom-header": "custom-value",
+      "x-dynamic-header": "{{dynamicHeader}}"
+    }
+  },
+  "model": "gpt-4o",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What are the possible values for the \"Connection\" HTTP header?"
+    }
+  ]
+}

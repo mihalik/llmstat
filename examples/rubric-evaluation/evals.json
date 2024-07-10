@@ -1,0 +1,19 @@
+{
+  "default": {
+    "type": "default",
+    "value": [
+      {
+        "type": "llm-rubric",
+        "value": "It must be a funny joke."
+      },
+      {
+        "type": "llm-rubric",
+        "value": "It must follow the format \"Why did the <X> cross the road? <ANSWER>\""
+      },
+      {
+        "type": "llm-rubric",
+        "value": "It must use the word the user provided in the joke.  The word was: {{word}}."
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{"id": "pass1", "evals": ["austin"], "location": "in Austin, TX"}
+{"id": "pass2", "evals": ["austin"], "location": "in the capitol of Texas"}
+{"id": "pass3", "evals": ["sanfran"], "location": "in the city where the golden gate bridge is located"}
+{"id": "pass4", "evals": ["longyearbyen"], "location": "in the northernmost city in the world"}
+{"id": "pass5", "evals": ["unknown"], "location": "on the moon"}
+{"id": "pass6", "evals": ["unknown"], "location": "in a blue house"}
+{"id": "fail-test", "evals": ["unknown"], "location": "in Austin"}

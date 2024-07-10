@@ -1,0 +1,14 @@
+{
+  "metadata": { "name": "rubricPrompt", "provider": "openai" },
+  "model": "gpt-3.5-turbo",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Your task is to complete a joke based on the user's input. The joke must follow the format \"Why did the <X> cross the road? <ANSWER>\" The user will provide the value for \"X\" and you must provide the answer and return the full joke.  The joke must be funny."
+    },
+    {
+      "role": "user",
+      "content": "Please make a joke with: {{word}}"
+    }
+  ]
+}

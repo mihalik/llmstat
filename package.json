@@ -1,0 +1,34 @@
+{
+  "name": "lmeval",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "**This is a work in progress**",
+  "exports": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "file-system-cache": "^2.4.4",
+    "mustache": "^4.2.0",
+    "openai": "^4.52.0",
+    "ora": "^8.0.1",
+    "p-queue": "^8.0.1",
+    "p-retry": "^6.2.0",
+    "promptfoo": "^0.68.0",
+    "split": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/cache-manager": "^4.0.6",
+    "@types/mustache": "^4.2.5",
+    "@types/node": "^20.14.7",
+    "@types/split": "^1.0.5",
+    "typescript": "^5.5.2"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "metadata": { "name": "evalPromptJsonFormat", "provider": "openai" },
+  "model": "gpt-3.5-turbo",
+  "response_format": { "type": "json_object" },
+  "messages": [
+    {
+      "role": "system",
+      "content": "Your task it to determine the city where the user lives.  They will provide you with information about their city using the following JSON format: {\"city\": \"CITY NAME\"}.  If you can't determine the city name use `Unknown` as the name."
+    },
+    {
+      "role": "user",
+      "content": "I live {{location}}."
+    }
+  ]
+}

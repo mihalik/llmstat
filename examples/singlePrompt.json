@@ -1,0 +1,10 @@
+{
+  "metadata": { "name": "singlePrompt", "provider": "openai" },
+  "model": "gpt-3.5-turbo",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Write a joke about testing non-deterministic systems."
+    }
+  ]
+}

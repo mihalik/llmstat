@@ -1,0 +1,37 @@
+{
+  "title": "Prompt Configuration",
+  "description": "The configuration for a prompt.",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the prompt."
+        },
+        "provider": {
+          "type": "string",
+          "description": "The model provider to run the prompt.  Currently supports 'openai'."
+        },
+        "headers": {
+          "type": "object",
+          "description": "The headers to pass to the provider.",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["provider"]
+    },
+    "model": {
+      "type": "string",
+      "description": "The model to use for the prompt."
+    },
+    "messages": {
+      "type": "array",
+      "description": "The messages in the prompt."
+    }
+  },
+  "required": ["metadata", "model", "messages"]
+}
