@@ -14,10 +14,7 @@ export function getConfig() {
   return config;
 }
 
-program
-  .name("lmeval")
-  .description("Language Model Evaluation")
-  .version("0.0.1");
+program.name("deval").description("Language Model Evaluation").version("0.0.1");
 
 program
   .command("generate")

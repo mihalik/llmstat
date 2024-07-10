@@ -1,10 +1,10 @@
-# lmeval
+# DEval
 
 > It’s easy to make something cool with LLMs, but very hard to make something production-ready with them.
 
 - [Chip Huyen](https://huyenchip.com/2023/04/11/llm-engineering.html)
 
-## What is `lmeval`?
+## What is `DEval`?
 
 Command-line for generating responses from an LLM and evaluating those responses. Primarily focused on evaluating a prompts with datasets and comparing results across multiple runs.
 
@@ -34,16 +34,16 @@ Current limitations:
 
 ```shell
 # Single prompt can generate a single result
-npx lmeval generate --prompt prompt.json
+npx deval generate --prompt prompt.json
 
 # Prompt + dataset can get batch results
-npx lmeval generate --prompt prompt.json --data dataset.jsonl
+npx deval generate --prompt prompt.json --data dataset.jsonl
 
 # These can also write directly to a file (json for single, jsonl for batch)
-npx lmeval generate -p prompt.json -d dataset.jsonl --output out.json
+npx deval generate -p prompt.json -d dataset.jsonl --output out.json
 
 # You can also point to a folder containing prompt.json and dataset.jsonl
-npx lmeval generate --folder examples/batch
+npx deval generate --folder examples/batch
 
 ```
 
@@ -51,13 +51,13 @@ npx lmeval generate --folder examples/batch
 
 ```shell
 # Prompt + dataset + evals can evaluate all responses
-npx lmeval eval --prompt prompt.json --data dataset.jsonl --eval eval.json
+npx deval eval --prompt prompt.json --data dataset.jsonl --eval eval.json
 
 # If you have pre-generated responses you can use that + evals
-npx lmeval eval --run run.jsonl --eval eval.json
+npx deval eval --run run.jsonl --eval eval.json
 
 # You can also point to a folder containing the appropriate files
-npx lmeval eval --folder examples/rubric
+npx deval eval --folder examples/rubric
 ```
 
 **Environment variables**
@@ -65,16 +65,16 @@ npx lmeval eval --folder examples/rubric
 Environment variables can be set in the environment or in a `.env` file in the directory where the command is run.
 
 `OPENAI_API_KEY` - An API key for OpenAI. This key is required. Other environment variables supported by `openai-node` are also supported.
-`LMEVAL_CACHE_PATH` to override the cache directory. Default is `~/.lmeval/cache`.
-`LMEVAL_CONCURRENCY` - The number of concurrent requests that are run (default 6)
-`LMEVAL_REQUEST_INTERVAL_MS` - The number (in milliseconds) of seconds for rate limiting (default 60000)
-`LMEVAL_REQUEST_CAP` - The number of requests within the interval for rate limiting (default 1000)
+`DEVAL_CACHE_PATH` to override the cache directory. Default is `~/.deval/cache`.
+`DEVAL_CONCURRENCY` - The number of concurrent requests that are run (default 6)
+`DEVAL_REQUEST_INTERVAL_MS` - The number (in milliseconds) of seconds for rate limiting (default 60000)
+`DEVAL_REQUEST_CAP` - The number of requests within the interval for rate limiting (default 1000)
 
 **Rate limiting**
 
-If lmeval encounters a rate limit error (or other recoverable error from the API) it will retry with exponential backoff to try and recover from those errors. However, if you know you have a specific rate limit, it will be more efficient to configure lmeval to run within that rate limit.
+If DEval encounters a rate limit error (or other recoverable error from the API) it will retry with exponential backoff to try and recover from those errors. However, if you know you have a specific rate limit, it will be more efficient to configure DEval to run within that rate limit.
 
-You can use the rate limiting environment variables to speed up or slow down your requests depending on the rate of requests you are trying to achieve. Use `LMEVAL_CONCURRENCY` to increase the number of concurrent requests to run faster. Adust `LMEVAL_REQUEST_INTERVAL_MS` and `LMEVAL_REQUEST_CAP` to slow down requests. For example, if you wanted to run a maximum of 20 requests per minute you could set `LMEVAL_REQUEST_INTERVAL_MS=60000, LMEVAL_REQUEST_CAP=20` and this would prevent more than 20 requests per minute. If you wanted to spread those requests out through the minute it might be better to set `LMEVAL_REQUEST_INTERVAL_MS=3000, LMEVAL_REQUEST_CAP=1`. This would run a maximum of one request every 3 seconds.
+You can use the rate limiting environment variables to speed up or slow down your requests depending on the rate of requests you are trying to achieve. Use `DEVAL_CONCURRENCY` to increase the number of concurrent requests to run faster. Adust `DEVAL_REQUEST_INTERVAL_MS` and `DEVAL_REQUEST_CAP` to slow down requests. For example, if you wanted to run a maximum of 20 requests per minute you could set `DEVAL_REQUEST_INTERVAL_MS=60000, DEVAL_REQUEST_CAP=20` and this would prevent more than 20 requests per minute. If you wanted to spread those requests out through the minute it might be better to set `DEVAL_REQUEST_INTERVAL_MS=3000, DEVAL_REQUEST_CAP=1`. This would run a maximum of one request every 3 seconds.
 
 ## File formats
 
