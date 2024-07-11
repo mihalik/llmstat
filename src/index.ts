@@ -14,7 +14,10 @@ export function getConfig() {
   return config;
 }
 
-program.name("deval").description("Language Model Evaluation").version("0.0.1");
+program
+  .name("llmstat")
+  .description("Language Model Evaluation")
+  .version("0.0.1");
 
 program
   .command("generate")

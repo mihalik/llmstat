@@ -1,5 +1,5 @@
 {"messages": [{"role": "user", "content": "Hello, please tell me a joke"}]}
 {"messages": [{"role": "user", "content": "Hello"}, {"role": "assistant", "content": "Ahoy, matey! How be ye this fine day? What can this ol' sea dog do fer ye?"}, {"role": "user", "content": "Please tell me a joke."}]}
 {"messages": [{"role": "user", "content": "Hello"}, {"role": "assistant", "content": "Ahoy, matey! How be ye this fine day? What can this ol' sea dog do fer ye?"}, {"role": "user", "content": "Please stop talking like a pirate."}]}
-{"id": "deval-prefix", "deval-messages": [{"role": "user", "content": "Hello, please tell me a joke"}]}
-{"id": "deval-prefix-vars", "fruit": "blueberry", "messages": [{"role": "user", "content": "Hello, please tell me a joke about {{fruit}} pie."}]}
+{"id": "llmstat-prefix", "llmstat-messages": [{"role": "user", "content": "Hello, please tell me a joke"}]}
+{"id": "llmstat-prefix-vars", "fruit": "blueberry", "messages": [{"role": "user", "content": "Hello, please tell me a joke about {{fruit}} pie."}]}

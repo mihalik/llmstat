@@ -11,8 +11,9 @@ export function getCache(): FileSystemCache | undefined {
   let config = getConfig();
   if (!cacheInstance && config.cache) {
     cacheInstance = new Cache({
-      basePath: process.env.DEVAL_CACHE_PATH || `${os.homedir()}/.deval/cache`,
-      ns: "deval",
+      basePath:
+        process.env.LLMSTAT_CACHE_PATH || `${os.homedir()}/.llmstat/cache`,
+      ns: "llmstat",
       ttl: 60 * 60 * 24 * 7, // 1 week
     });
   }

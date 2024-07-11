@@ -39,7 +39,8 @@ async function runSingleEval(runData: any, evalsConfig: any): Promise<any> {
   let cache: FileSystemCache | undefined = getCache();
   // Evals can be stored as two names
   // TODO: Validate as an array
-  const requiredEvals = runData?.data?.["deval-evals"] || runData?.data?.evals;
+  const requiredEvals =
+    runData?.data?.["llmstat-evals"] || runData?.data?.evals;
 
   // Add results to the run data
   runData.evalResults = [];

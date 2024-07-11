@@ -1,10 +1,7 @@
-# DEVAL TODO
+# LLMStat TODO
 
 ## SOON
 
-- Final name decision
-- README cleanup
-- Mark open-source
 - Publish to NPM
 - Does JSON import work for schema
 

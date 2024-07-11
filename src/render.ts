@@ -3,7 +3,7 @@ import mustache from "mustache";
 export function renderPrompt(promptConfig: any, data: any): string {
   const renderedPrompt = structuredClone(promptConfig);
   // Append any messages from the data into the prompt config
-  const messages = data["deval-messages"] || data.messages;
+  const messages = data["llmstat-messages"] || data.messages;
   if (messages) {
     renderedPrompt.messages.push(...messages);
     // TODO: Delete the messages?  Or keep it in for complete data in the log?

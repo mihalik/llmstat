@@ -1,8 +1,8 @@
 {
-  "name": "deval",
+  "name": "llmstat",
   "type": "module",
-  "version": "1.0.0",
-  "description": "**This is a work in progress**",
+  "version": "0.0.2",
+  "description": "**Language Model generation and evaluation**",
   "exports": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
