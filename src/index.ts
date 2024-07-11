@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // Load environment variables from .env.  This must be first.
 import "dotenv/config";
 import { Command } from "commander";
