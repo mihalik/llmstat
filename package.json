@@ -1,9 +1,15 @@
 {
   "name": "llmstat",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "**Language Model generation and evaluation**",
-  "exports": "./index.js",
+  "main": "./dist/bin.js",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "llmstat": "./dist/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc"
